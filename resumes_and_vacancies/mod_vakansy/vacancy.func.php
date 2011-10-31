@@ -4,7 +4,7 @@
 function categories_index()
 {
 	d()->categories_list = d()->Category->all;
-	print d()->categories_index_tpl();
+	print d()->view();
 }
 
 //Список вакансий в определённой категории
@@ -12,7 +12,7 @@ function categories_show()
 {
 	d()->category=d()->Category->find(url(1));
 	d()->vacancies_list = d()->category->vacancies;
-	print d()->vacancies_list_tpl();
+	print d()->view();
 }
 
 //Размещение формы с резюме
@@ -28,12 +28,12 @@ function show_resume()
 		$new_resume->save();
 		header('Location: /resumes/');
 	}
-	print d()->resume_form_tpl();
+	print d()->view('resume_form');
 }
 
 //Список оставленных резюме
 function resumes_list()
 {
 	d()->resumes_list=d()->Resume;
-	print d()->resumes_list_tpl();
+	print d()->view();
 }
