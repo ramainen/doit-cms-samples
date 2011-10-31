@@ -1,0 +1,15 @@
+<h1>Список вакансий в категории {category.title}</h1>
+
+{{add 'vacancies', 'category_id'=>url(1)}}
+<foreach vacancies_list as vacancy>
+	<table class="vacancy">
+		<tr>
+			<td class="first_column">{vacancy.title} {{edit}} {{delete}}</td>
+			<td>Примерная зарплата: {vacancy.pay}</td>
+		</tr>
+		<tr>
+			<td colspan="2">{vacancy.text}</td>
+		</tr>
+	</table>
+</foreach>
+

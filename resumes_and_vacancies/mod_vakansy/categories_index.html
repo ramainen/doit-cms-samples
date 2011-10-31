@@ -1,0 +1,9 @@
+<h1>Список категорий с вакансиями</h1>
+
+<ul>
+	{{add 'categories'}}
+	<foreach categories_list as category>
+		<li><a href="/{category.id}">{category.title}</a> {{edit}} {{delete}}</li>
+	</foreach>
+
+</ul>

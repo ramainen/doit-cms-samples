@@ -1,0 +1,28 @@
+<h1>Список резюме</h1>
+ 
+<foreach resumes_list as resume>
+	<table class="resume">
+		<tr>
+			<td class="first_column">ФИО:</td>
+			<td>{.name} {{delete}}</td>
+		</tr>
+		<tr>
+			<td>Возраст:</td>
+			<td>{.age}</td>
+		</tr>
+		<tr>
+			<td>Образование:</td>
+			<td>{.graduation}</td>
+		</tr>
+		<tr>
+			<td>Желаемая зарплата:</td>
+			<td>{.pay}</td>
+		</tr>
+		<tr>
+			<td>Номер телефона:</td>
+			<td>{.phone}</td>
+		</tr>
+	</table>
+	<br>
+</foreach>
+
